@@ -8,7 +8,9 @@ const getSummerOrWinter = (latitude, month) => {
   }
 };
 
-const SummerOrWinter = () => {
+const SummerOrWinter = props => {
+  const summerOrWinter = getSummerOrWinter(props.latitude, new Date().getMonth());
+
   return <div>Summer Or Winter</div>;
 };
 
