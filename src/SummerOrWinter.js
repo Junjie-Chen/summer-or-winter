@@ -28,7 +28,7 @@ const SummerOrWinter = props => {
   } = summerOrWinterConfig[summerOrWinter];
 
   return (
-    <div>
+    <div className="summer-or-winter">
       <i className={`icon-left massive ${iconName} icon`}></i>
       <h1>{text}</h1>
       <i className={`icon-right massive ${iconName} icon`}></i>
