@@ -22,12 +22,15 @@ const getSummerOrWinter = (latitude, month) => {
 const SummerOrWinter = props => {
   const summerOrWinter = getSummerOrWinter(props.latitude, new Date().getMonth());
   const {
-    text
+    text,
+    iconName
   } = summerOrWinterConfig[summerOrWinter];
 
   return (
     <div>
+      <i className={`${iconName} icon`}></i>
       <h1>{text}</h1>
+      <i className={`${iconName} icon`}></i>
     </div>
   );
 };
