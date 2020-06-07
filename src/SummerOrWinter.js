@@ -21,8 +21,15 @@ const getSummerOrWinter = (latitude, month) => {
 
 const SummerOrWinter = props => {
   const summerOrWinter = getSummerOrWinter(props.latitude, new Date().getMonth());
+  const {
+    text
+  } = summerOrWinterConfig[summerOrWinter];
 
-  return <div>Summer Or Winter</div>;
+  return (
+    <div>
+      <h1>{text}</h1>
+    </div>
+  );
 };
 
 export default SummerOrWinter;
