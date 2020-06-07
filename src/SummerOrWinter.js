@@ -1,3 +1,4 @@
+import './SummerOrWinter.css';
 import React from 'react';
 
 const summerOrWinterConfig = {
