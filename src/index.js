@@ -7,6 +7,13 @@ class App extends Component {
     errorMessage: ''
   };
 
+  componentDidMount() {
+    window.navigator.geolocation.getCurrentPosition(
+      position => position,
+      error => error
+    );
+  }
+
   render() {
     return <div>App</div>;
   }
