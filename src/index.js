@@ -17,7 +17,7 @@ const App = () => {
     content = <Spinner message="Please allow access to your location." />;
   }
 
-  return <div>App</div>;
+  return <div>{content}</div>;
 };
 
 ReactDOM.render(
