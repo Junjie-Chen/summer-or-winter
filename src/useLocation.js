@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react';
 
 const useLocation = () => {
-  const [latitude] = useState(null);
+  const [latitude, setLatitude] = useState(null);
   const [errorMessage] = useState('');
 
   useEffect(() => {
     window.navigator.geolocation.getCurrentPosition(
-      position => position,
+      position => setLatitude(position.coords.latitude),
       error => error
     );
   }, []);
