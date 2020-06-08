@@ -19,6 +19,10 @@ class App extends Component {
     if (this.state.latitude && !this.state.errorMessage) {
       return <SummerOrWinter latitude={this.state.latitude} />;
     }
+
+    if (!this.state.latitude && this.state.errorMessage) {
+      return <div>Error: {this.state.errorMessage}</div>;
+    }
   }
 
   render() {
