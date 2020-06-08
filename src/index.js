@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import useLocation from './useLocation';
+import SummerOrWinter from './SummerOrWinter';
 
 const App = () => {
   const [latitude, errorMessage] = useLocation();
@@ -9,6 +10,8 @@ const App = () => {
 
   if (errorMessage) {
     content = <div>Error: {errorMessage}</div>;
+  } else if (latitude) {
+    content = <SummerOrWinter />;
   }
 
   return <div>App</div>;
