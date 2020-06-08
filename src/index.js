@@ -17,7 +17,7 @@ class App extends Component {
 
   renderContent() {
     if (this.state.latitude && !this.state.errorMessage) {
-      return <SummerOrWinter />;
+      return <SummerOrWinter latitude={this.state.latitude} />;
     }
   }
 
