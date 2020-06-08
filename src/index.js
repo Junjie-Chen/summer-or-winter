@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import SummerOrWinter from './SummerOrWinter';
+import Spinner from './Spinner';
 
 class App extends Component {
   state = {
@@ -23,6 +24,8 @@ class App extends Component {
     if (!this.state.latitude && this.state.errorMessage) {
       return <div>Error: {this.state.errorMessage}</div>;
     }
+
+    return <Spinner />;
   }
 
   render() {
