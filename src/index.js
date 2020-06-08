@@ -14,7 +14,7 @@ const App = () => {
   } else if (latitude) {
     content = <SummerOrWinter latitude={latitude} />;
   } else {
-    content = <Spinner />;
+    content = <Spinner message="Please allow access to your location." />;
   }
 
   return <div>App</div>;
