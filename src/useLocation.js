@@ -10,6 +10,8 @@ const useLocation = () => {
       error => setErrorMessage(error.message)
     );
   }, []);
+
+  return [latitude, errorMessage];
 };
 
 export default useLocation;
