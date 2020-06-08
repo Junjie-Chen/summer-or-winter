@@ -11,7 +11,7 @@ const App = () => {
   if (errorMessage) {
     content = <div>Error: {errorMessage}</div>;
   } else if (latitude) {
-    content = <SummerOrWinter />;
+    content = <SummerOrWinter latitude={latitude} />;
   }
 
   return <div>App</div>;
